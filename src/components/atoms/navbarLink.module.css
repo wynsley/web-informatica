@@ -1,0 +1,39 @@
+.navLink {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transform: scale(1.08);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(60deg, var(--ski-blue), var(--main-color));
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.active::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: var(--main-color);
+}
+
+.active,
+.active::after {
+  width: 100%;
+  color: var(--main-color);
+}

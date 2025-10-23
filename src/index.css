@@ -1,0 +1,63 @@
+/*
+-------------------- FONTS -----------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: "AtomicAge";
+    src: url(/src/assets/fonts/AtomicAge.woff2) format(woff2);
+    font-size: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Josefin";
+    src: url(/src/assets/fonts/JosefinSansr.woff2) format(woff2);
+    font-size: normal;
+    font-weight: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #020f18;
+    --second-bg-color: #031624;
+    --text-color:#ededed;
+    --main-color: #15ff00;
+    --skills-color:#071a29;
+    --barraD-color:#045e70;
+    --ski-blue:#00eeff;
+    --purple-color: #ae00ff;
+
+    /*SHADOWS*/
+      --shadow-logo: 0 5px 6px -3px var(--main-color);
+      --shadow-fire-green: 0 0 4px 1px var(--main-color);
+      --shadow-fire-purp: 0 0 4px 1px var(--purple-color);
+      --shadow-fire-ski: 0 0 3px 1px var(--ski-blue);
+      --shadow-fire-blue: 0 0 4px 4px var(--ski-blue);
+      --shadow-fire-black: 0 0 15px 10px black;
+}
+
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}

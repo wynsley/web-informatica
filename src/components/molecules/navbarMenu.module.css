@@ -1,0 +1,18 @@
+.navbar__Menu{
+    display: flex;
+    max-width: 100%;
+    min-width: 200px;
+    align-items: center;
+    justify-content: center;
+    font-size: all 1.5em ease;
+}
+
+.menu__item{
+    margin-left: 3em;
+    list-style: none;
+    position: relative;
+}
+
+.menu__icon{
+    display: none;
+}
