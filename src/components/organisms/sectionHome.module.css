@@ -1,9 +1,147 @@
-.home{
-    background: var(--bg-color);
-    padding: 7em 8%;
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 5em 8%;
+  overflow: hidden;
 }
 
-.title{
-    color: var(--text-color);
-    font-size: 2.5em;
+.bgImage {
+  position: absolute;
+  inset: 0; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  z-index: -1;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 70em;
+  min-width: 260px;
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.1; 
+}
+
+.title span {
+  color: var(--ski-blue-1);
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.buttons{
+  margin-top:5em ;
+  display: flex;
+  gap: 3em;
+  font-size: 1.4em;
+}
+
+.btn{
+  color: var(--text-color);
+  height: 3em;
+  width: 11em;
+  border: 2px solid var(--card-border);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .4s ease;
+  text-decoration: none; 
+  background: transparent; 
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btnLeft {
+  position: relative;
+  background: linear-gradient(135deg, #0f364a , #2fb7d8);
+  color: white;
+  transition: .4s;
+  overflow: hidden;
+
+}
+
+.btnLeft::before{
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background:rgb(0, 0, 0);
+  transition: width .4s ease;
+  z-index: -1; 
+}
+
+.btnLeft:hover::before{
+  width: 100%;
+}
+.btnLeft:hover {
+  color: var(--ski-blue-1);
+}
+
+.btnRight{
+  background: transparent; 
+  color: var(--ski-blue-1);
+}
+
+/*
+=============== RESPONSIVE DESIGN ============
+*/
+
+@media (max-width: 768px) {
+  .home {
+    height: 80vh; 
+    padding: 4em 5%;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .description {
+    font-size: 1.2em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .home {
+    height: 60vh; 
+    padding: 3em 5%;
+  }
+
+  .bgImage {
+    object-position: center top;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  .description {
+    font-size: 1em;
+  }
 }

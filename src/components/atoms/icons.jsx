@@ -1,14 +1,20 @@
-import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { HiMenu, HiX } from "react-icons/hi";
+import styles from "./icons.module.css";
 
-function MenuIcon({ size = 24, color = "white", className = "" }) {
+function MenuButton({ isOpen, onClick }) {
   return (
-    <AiOutlineMenuUnfold 
-      size={size} 
-      color={color} 
-      className={className} 
-      />
+    <button 
+      className={`${styles.menuButton} ${isOpen ? styles.open : ""}`}
+      onClick={onClick}
+      aria-label="Toggle menu"
+    >
+      {isOpen ? (
+        <HiX className={styles.menuButton__icon} />
+      ) : (
+        <HiMenu className={styles.menuButton__icon} />
+      )}
+    </button>
   );
 }
-export { MenuIcon };
 
-// Se puede agregar los iconos que se necesite en todo la web
+export { MenuButton };

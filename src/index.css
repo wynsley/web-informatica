@@ -36,25 +36,26 @@
 
 :root{
   /* Background colors */
-    --bg-color: #031725;
-    --bg-colortwo: #05161a;
-    --bg-colortree:#072e33;
+    --nav-color: #0f131b;
+    --bg-home: #101c26;
+    --bg-courss: #0f131b;
+    --bg-reasons:#0f202a;
     
+    /*degradado*/
+    --color-blu: #10212b;
+    --color-blu-2: #11141c;
     /*Colors text and cards*/
     --text-color:#ededed;
-    --hover-color:#b94ff2;
-    --ski-blue-1:#0c7075;
-    --ski-blue-2:#00f3f7;
-    --gray-claro: #6da5c0;
-    --gray: #294d61;
+    --black:#000000;
+    --hover-color:#0f202a;
+    --ski-blue-1:#2fb7d8;
+    --card-border:#0f364a;
+    --card-color:#0f3141;
+    --gray-claro: #302e33;
+    --gray: #191919 ;
     
     /*SHADOWS*/
-      --shadow-logo: 0 5px 6px -3px var(--main-color);
-      --shadow-fire-green: 0 0 4px 1px var(--main-color);
-      --shadow-fire-purp: 0 0 4px 1px var(--purple-color);
-      --shadow-fire-ski: 0 0 3px 1px var(--ski-blue);
-      --shadow-fire-blue: 0 0 4px 4px var(--ski-blue);
-      --shadow-fire-black: 0 0 15px 10px black;
+      
 }
 
 
@@ -65,11 +66,42 @@ html{
 }
 
 body{
-  background: var(--bg-colortwo);
+  background: var(--bg-home);
   color: var(--text-color);
 }
-section {
+section:not([class*="home"]) {
   min-height: 100vh;
   width: 100%;
   position: relative;
+}
+
+
+/*
+================ RESPONSIVE DESIGN ===================
+*/
+
+@media(max-width: 1200px){
+  html{
+  font-size: 55.5%;
+}
+}
+@media(max-width: 991px){
+  html{
+  font-size: 50.5%;
+}
+}
+@media(max-width: 768px){
+  html{
+  font-size: 46.5%;
+}
+}
+@media(max-width: 550px){
+  html{
+  font-size: 42.5%;
+}
+}
+@media(max-width: 420px){
+    html{
+  font-size: 42.5%;
+}
 }

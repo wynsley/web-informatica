@@ -1,0 +1,31 @@
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.menuButton.open {
+  transform: rotate(180deg);
+}
+
+.menuButton__icon {
+  width: 26px;
+  height: 26px;
+  color: var(--ski-blue-1);
+  box-shadow: 0 2px 5px var(--ski-blue-1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+@media (max-width: 420px) {
+  .menuButton__icon{
+    width: 20px;
+    height: 20px;
+  }
+}

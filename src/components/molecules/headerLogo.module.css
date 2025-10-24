@@ -1,5 +1,44 @@
-.logo__name {
-  font-size: 1.6em;
-  font-family: "Michroma";
+.logo {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
   font-weight: 900;
+}
+
+.logo__image{
+  width: 5em;
+  height: auto;
+}
+
+.logo__name{
+  font-family: "Michroma";
+  color: var(--ski-blue-1);
+  font-size: 1.3em;
+}
+
+/*
+================= RESPONSIVE DESIGN =================
+*/
+@media (max-width: 991px) {
+  .logo{
+    gap: .3em;
+  }
+  .logo__name{
+    font-size: 1em;
+  }
+  .logo__image{
+    width: 4em;
+  }
+}
+@media (max-width: 420px) {
+  .logo{
+    gap: .3em;
+  }
+  .logo__name{
+    font-size: .7em;
+  }
+  .logo__image{
+    width: 3em;
+  }
 }

@@ -1,18 +1,14 @@
-import { CustomLink } from '../atoms/customLInk'
-import styles from './headerLogo.module.css'
+import { CustomLink } from "../atoms/customLInk";
+import styles from "./headerLogo.module.css";
 
-function Logo () {
-    const logo = 'Informática'
-    return (
-        <div className={styles.logo}>
-            <CustomLink 
-            text={logo} 
-            href='/'
-            className={styles.logo__name}
-            size='25px'
-            />
-        </div>
-    )
+function Logo() {
+  const logo = "Informática";
+  return (
+    <CustomLink href="/" className={styles.logo} >
+      <img src="/LOGO.png" alt="Logo" className={styles.logo__image} />
+      <span className={styles.logo__name}>{logo}</span>
+    </CustomLink>
+  );
 }
 
-export {Logo}
+export { Logo };

@@ -1,8 +1,8 @@
 import { NavbarLink } from "../atoms/navbarLink";
 import styles from "./navbarMenu.module.css";
 import { useEffect, useState } from "react";
-import { MenuIcon } from "../atoms/icons";
-function NavbarMenu() {
+
+function NavbarMenu({ isOpen, isMobile }) {
   const menu = [
     {
       text: "Cursos",
@@ -26,7 +26,7 @@ function NavbarMenu() {
     },
   ];
 
-  const [active, setActive] = useState(null); // null = ninguna sección activa
+  const [active, setActive] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +35,7 @@ function NavbarMenu() {
       // sección Home
       const homeSection = document.querySelector('#home');
       if (homeSection && scrollPos < homeSection.offsetTop + homeSection.offsetHeight) {
-        setActive(null); // estamos en Home, ningún link activo
+        setActive(null);
         return;
       }
 
@@ -54,13 +54,18 @@ function NavbarMenu() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // actualizar al cargar
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Clases dinámicas según si es mobile y si está abierto
+  const menuClass = isMobile 
+    ? `${styles.navbar__Menu} ${styles.navbar__Menu__mobile} ${isOpen ? styles.navbar__Menu__open : ''}` 
+    : styles.navbar__Menu;
+
   return (
-    <ul className={styles.navbar__Menu}>
+    <ul className={menuClass}>
       {
         menu.map((w, i) => {
           return (
@@ -68,13 +73,12 @@ function NavbarMenu() {
               <NavbarLink 
                 text={w.text} 
                 href={w.href}
-                isActive= {active===w.href}
+                isActive={active === w.href}
               />
             </li>
           )
         })
       }
-      <MenuIcon className={styles.menu__icon}/>
     </ul>
   )
 }

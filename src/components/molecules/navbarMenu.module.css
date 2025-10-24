@@ -1,18 +1,95 @@
-.navbar__Menu{
-    display: flex;
-    max-width: 100%;
+/* Desktop */
+.navbar__Menu {
+  display: flex;
+  max-width: 100%;
+  min-width: 200px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease; /* Corregí "font-size" por "transition" */
+}
+
+.menu__item {
+  margin-left: 3em;
+  list-style: none;
+  position: relative;
+}
+
+
+
+/* Mobile - Menú lateral */
+.navbar__Menu__mobile {
+  position: fixed;
+  top: 7em; 
+  right: -100%; 
+  width: 30%;
+  max-width: 350px;
+  min-width: 250px;
+  height: calc(auto - 7em);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: var(--nav-color);
+  padding: 2rem 1.5rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.4s ease;
+  z-index: 99;
+  overflow-y: auto;
+}
+
+/* Cuando el menú mobile está abierto */
+.navbar__Menu__mobile.navbar__Menu__open {
+  right: 0;
+  height: auto;
+  width: auto;
+}
+
+.navbar__Menu__mobile .menu__item {
+  width: 100%;
+  margin-left: 0; 
+  margin-bottom: 0;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--card-border);
+  font-size: 1.5em;
+}
+
+.navbar__Menu__mobile .menu__item:last-child {
+  border-bottom: none;
+}
+
+/* Overlay oscuro detrás del menú (opcional) */
+.navbar__Menu__mobile::before {
+  content: "";
+  position: fixed;
+  top: 7em;
+  left: -100vw;
+  width: 100vw;
+  height: calc(auto - 7em);
+  background: rgba(2, 32, 50, 0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.navbar__Menu__mobile.navbar__Menu__open::before {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*
+================ RESPONSIVE DESIGN ===================
+*/
+
+
+@media (max-width: 991px) {
+  .menu__item{
+    margin-left: 2em;
+  }
+}
+@media (max-width: 420px) {
+  .navbar__Menu__mobile{
     min-width: 200px;
-    align-items: center;
-    justify-content: center;
-    font-size: all 1.5em ease;
-}
 
-.menu__item{
-    margin-left: 3em;
-    list-style: none;
-    position: relative;
-}
-
-.menu__icon{
-    display: none;
+  }
 }
