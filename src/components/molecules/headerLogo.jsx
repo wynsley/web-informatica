@@ -9,7 +9,7 @@ function Logo () {
             text={logo} 
             href='/'
             className={styles.logo__name}
-            size='30px'
+            size='25px'
             />
         </div>
     )

@@ -1,5 +1,5 @@
 .customlink{
     text-decoration: none;
-    color: aqua;
+    color: var(--ski-blue-2);
     font-size: 1.5em;
 }

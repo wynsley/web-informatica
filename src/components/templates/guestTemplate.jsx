@@ -1,4 +1,5 @@
 import { Navbar } from "../organisms/navbar";
+import { Footer } from "../organisms/footer";
 
 function GuestTemplates({ children }) {
   return (
@@ -7,6 +8,7 @@ function GuestTemplates({ children }) {
       <section>
         {children}
       </section>
+      <Footer/>
     </>
   );
 }

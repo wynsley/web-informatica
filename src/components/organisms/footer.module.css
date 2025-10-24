@@ -1,0 +1,26 @@
+.footer{
+    width: 100vw;
+    height: 6em;
+    background-color: black;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5em;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.autores{
+    font-size:.9em;
+    font-family: 'Michroma';
+}
+
+.autores span {
+    color: aqua;
+    font-size:1.2em;
+    font-family: 'Michroma';
+}
