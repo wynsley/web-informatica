@@ -1,0 +1,37 @@
+.icon {
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.large {
+  font-size: 72px;
+}
+
+.medium {
+  font-size: 56px;
+}
+
+.small {
+  font-size: 48px;
+}
+
+
+/*
+  ========== RESPONSIVE SESIGN ============== */
+@media (max-width: 768px) {
+  .large {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .large {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .large {
+    font-size: 40px;
+  }
+}

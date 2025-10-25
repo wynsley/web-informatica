@@ -69,17 +69,17 @@ body{
   background: var(--bg-home);
   color: var(--text-color);
 }
-section:not([class*="home"]) {
+section:not([class*="home"], [class*="caroussel"]) {
   min-height: 100vh;
   width: 100%;
   position: relative;
 }
 
 
+
 /*
 ================ RESPONSIVE DESIGN ===================
 */
-
 @media(max-width: 1200px){
   html{
   font-size: 55.5%;
