@@ -1,7 +1,7 @@
 import { Courses } from "../organisms/sectionCourses";
 import { Home } from "../organisms/sectionHome";
-import { Reasouns } from "../organisms/sectionReasons";
-import { Caroussel } from "../organisms/caroussel";
+import { Reasons } from "../organisms/sectionReasons";
+import { Carousel } from "../organisms/carousel";
 import { Opportinities } from "../organisms/sectionOpportunities";
 import { Graduates } from "../organisms/sectionGraduates";
 import { Contact } from "../organisms/sectionContact";
@@ -12,8 +12,8 @@ function InformaticPage() {
     <main>
       <Home/>
       <Courses/>
-      <Caroussel/>
-      <Reasouns/>
+      <Carousel/>
+      <Reasons/>
       <Opportinities/>
       <Graduates/>
       <Contact/>

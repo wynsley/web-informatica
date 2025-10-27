@@ -1,0 +1,61 @@
+.titleContainer {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: var(--ski-blue-1);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: #cfd4d8;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.7rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}

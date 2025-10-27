@@ -6,7 +6,7 @@
     font-family: "Michroma";
     src: url(/src/assets/fonts/Michroma.woff2) format(woff2);
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: "Michroma";
@@ -93,6 +93,10 @@ section:not([class*="home"], [class*="caroussel"]) {
 @media(max-width: 768px){
   html{
   font-size: 46.5%;
+}
+section:not( [class*="caroussel"]){
+  min-height: 90vh;
+  width: 100%;
 }
 }
 @media(max-width: 550px){
