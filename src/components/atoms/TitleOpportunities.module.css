@@ -1,0 +1,11 @@
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 1.5em;
+}
+
+.title span {
+    color: var(--ski-blue-1);
+}

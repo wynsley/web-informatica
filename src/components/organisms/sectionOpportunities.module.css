@@ -1,75 +1,83 @@
 .opportunities {
-  display: flex;
-  gap: 2.5em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 5em 8%;
-  background: linear-gradient(90deg, #0f131b, #0f202a);
-}
-
-.title {
   text-align: center;
-  font-size: 2.8em;
-}
-.title span {
-  color: var(--ski-blue-1);
-}
-
-.navOpportunities {
-}
-.navOppMenu {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 6em;
-  position: relative;
-}
-.menuItem {
-  list-style: none;
-  font-size: 1.6;
-  
+  background: var(--bg-courss);
 }
 
-.itemLnk {
-  font-family: 'Michroma';
-  font-size: 1.3em;
-  font-weight: 900;
-  color: var(--ski-blue-1);
-  height: 3.5em;
-  border: 1px solid var(--card-border);
-  border-radius: 30px;
-  position: relative;
-  overflow: hidden;
-  padding: 0 1em;
-  display: flex;
-  align-items: center;
-  transition: all 0.4s;
-  isolation: isolate; 
-}
-
-.itemLnk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(135deg, #0f364a, #2fb7d8);
-  transition: width 0.4s ease;
-  z-index: -1; 
-}
-
-.itemLnk:hover::before {
-  width: 100%;
-}
-
-.itemLnk:hover {
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
   color: var(--text-color);
+  margin-top: 4em;
 }
 
-.line{
-  color: var(--card-border);
-  width: 100%;
-  height: 1px;
+.soporte {
+  background-image: url('/public/soporte-tecnico.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.redes {
+  background-image: url('/public/redes.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.seguridad {
+  background-image: url('/public/seguridad.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.programacion {
+  background-image: url('/public/programming.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.diseno {
+  background-image: url('/public/diseno.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.edicion {
+  background-image: url('/public/edicion.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* responsivo*/
+@media (min-width: 1024px) {
+  .cardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 767px) {
+  .cardsContainer {
+    grid-template-columns: 1fr; 
+    gap: 1.5em; 
+  }
+
+  .card {
+    padding: 2em; 
+    min-height: 300px;
+  }
 }
