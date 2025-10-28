@@ -41,6 +41,8 @@
   border: 1px solid transparent;
   z-index: 1;
   opacity: 1;
+  box-shadow: 0 10px 30px rgba(47, 183, 216, 0.3);
+  border-color: var(--ski-blue-1);
 }
 
 .card.active::before {
@@ -49,7 +51,7 @@
   inset: -1px;
   border-radius: 5px;
   padding: 2px;
-  background: linear-gradient(90deg, #00adad, #00ffff, #14ff04);
+  background: linear-gradient(90deg, #000000, #114456, #000000);
   background-size: 400%;
   z-index: -1;
   animation: rotateBorder 4s linear infinite;

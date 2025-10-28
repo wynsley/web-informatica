@@ -1,0 +1,78 @@
+.tab {
+  font-family: "Michroma", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ski-blue-1);
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #0f364a, #2fb7d8);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.tab:hover::before {
+  width: 100%;
+}
+
+.tab:hover {
+  color: var(--text-color);
+  border-color: var(--ski-blue-1);
+  transform: translateX(5px);
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #0f364a, #2fb7d8);
+  color: var(--text-color);
+  border-color: var(--ski-blue-1);
+  box-shadow: 0 4px 15px rgba(47, 183, 216, 0.3);
+  transform: translateX(10px);
+}
+
+.tab.active::before {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .tab {
+    font-size: 1.1rem;
+    padding: 0.9em 1.3em;
+  }
+  .tab:hover{
+  transform: translateY(5px);
+  }
+  .tab.active {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .tab {
+    font-size: 1rem;
+    padding: 0.8em 1.2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .tab {
+    font-size: 0.95rem;
+    padding: 0.7em 1em;
+  }
+}
+}

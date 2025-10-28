@@ -1,3 +1,134 @@
-.courses{
-    background-color: var(--bg-courss);
+.courses {
+  background-color: var(--bg-courss);
+  color: var(--text-color);
+  padding: 6em 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.mainTitle {
+  font-size: 3.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ski-blue-1);
+}
+
+.line {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--ski-blue-1),
+    transparent
+  );
+  margin: 0em 0 2em 0;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 12em auto;
+  gap: 4em;
+  align-items: start;
+}
+
+.coursesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.cycleTitle {
+  font-size: 2.3rem;
+  font-family: 'Michroma';
+  color: var(--ski-blue-1);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+/* =============== RESPONSIVE 991px =============== */
+@media (max-width: 991px) {
+  .courses {
+    padding: 5em 6%;
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .cycleTitle {
+    font-size: 2.2rem;
+  }
+}
+
+/* =============== RESPONSIVE 768px =============== */
+@media (max-width: 768px) {
+  .courses {
+    padding: 4em 5%;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .line {
+    margin: 1.5em 0;
+  }
+
+  .contentWrapper {
+    gap: 2.5em;
+  }
+
+  .cycleTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* =============== RESPONSIVE 576px =============== */
+@media (max-width: 576px) {
+  .courses {
+    padding: 3.5em 4%;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .contentWrapper {
+    gap: 2em;
+  }
+
+  .cycleTitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* =============== RESPONSIVE 480px =============== */
+@media (max-width: 480px) {
+  .courses {
+    padding: 3em 3%;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .line {
+    margin: 1.2em 0;
+  }
+
+  .contentWrapper {
+    gap: 1.8em;
+  }
+
+  .cycleTitle {
+    font-size: 1.6rem;
+  }
 }
