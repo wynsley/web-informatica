@@ -1,0 +1,149 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 1px solid var(--card-border);
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.484) 0%,
+    rgb(0, 0, 0) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8em;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #dce3e7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(47, 183, 216, 0.3);
+  border-color: var(--ski-blue-1);
+}
+
+.card:hover .cardBackground {
+  transform: scale(1.1);
+}
+
+.card:hover .cardOverlay {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 19, 27, 0.2) 0%,
+    rgba(15, 54, 74, 0.9) 100%
+  );
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .card {
+    height: 260px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 240px;
+  }
+
+  .cardContent {
+    padding: 1.5em;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    height: 220px;
+  }
+
+  .cardContent {
+    padding: 1.3em;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 1.2em;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+}

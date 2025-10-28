@@ -1,5 +1,5 @@
 import { HiMenu, HiX } from "react-icons/hi";
-import styles from "./icons.module.css";
+import styles from "./hamburguer.module.css";
 
 function MenuButton({ isOpen, onClick }) {
   return (

@@ -111,6 +111,7 @@ const SectionOpportunities = () => {
           />
         ))}
       </div>
+
     </section>
   )
 }

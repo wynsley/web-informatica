@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavbarMenu } from "../molecules/navbarMenu";
 import { Logo } from "../molecules/headerLogo";
-import { MenuButton } from '../atoms/icons';
+import { MenuButton } from '../atoms/hamburguer';
 import styles from "./navbar.module.css";
 
 function Navbar() {
