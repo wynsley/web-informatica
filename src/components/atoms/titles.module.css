@@ -11,13 +11,13 @@
 
 @media (max-width: 768px) {
   .title {
-    font-size: 3.3rem;
+    font-size: 3.8rem;
   }
 }
 @media (max-width: 480px) {
   .title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 3.5rem;
     line-height: 1.1;
   
   }

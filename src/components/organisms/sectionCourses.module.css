@@ -8,7 +8,7 @@
 }
 
 .mainTitle {
-  font-size: 3.8rem;
+  font-size: 3.9rem;
   font-weight: 700;
   text-align: center;
   color: var(--ski-blue-1);
@@ -29,14 +29,14 @@
 .contentWrapper {
   display: grid;
   grid-template-columns: 12em auto;
-  gap: 4em;
+  gap: 3em;
   align-items: start;
 }
 
 .coursesContent {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 2em;
 }
 
 .cycleTitle {
@@ -53,10 +53,6 @@
     padding: 5em 6%;
   }
 
-  .mainTitle {
-    font-size: 3rem;
-  }
-
   .contentWrapper {
     grid-template-columns: 1fr;
     gap: 3em;
@@ -71,10 +67,6 @@
 @media (max-width: 768px) {
   .courses {
     padding: 4em 5%;
-  }
-
-  .mainTitle {
-    font-size: 2.5rem;
   }
 
   .line {
@@ -98,7 +90,7 @@
   }
 
   .mainTitle {
-    font-size: 2rem;
+    font-size: 3.6rem;
   }
 
   .contentWrapper {
@@ -114,10 +106,6 @@
 @media (max-width: 480px) {
   .courses {
     padding: 3em 3%;
-  }
-
-  .mainTitle {
-    font-size: 1.8rem;
   }
 
   .line {

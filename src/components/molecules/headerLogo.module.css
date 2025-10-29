@@ -25,20 +25,17 @@
     gap: .3em;
   }
   .logo__name{
-    font-size: 1em;
+    font-size: 1.3em;
   }
   .logo__image{
-    width: 4em;
+    width: 5em;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .logo{
     gap: .3em;
   }
   .logo__name{
-    font-size: .7em;
-  }
-  .logo__image{
-    width: 3em;
-  }
+    font-size: 1em;
+}
 }

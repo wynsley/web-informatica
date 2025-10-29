@@ -34,8 +34,8 @@
 }
 
 @media (max-width: 768px) {
-  .carousel {
-    height: 18vh;
+  .caroussel{
+    height: 16vh;
   }
 
   .carouselWrapper {

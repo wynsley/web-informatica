@@ -1,6 +1,5 @@
 import styles from './sectionOpportunities.module.css'
 import { Title } from '../atoms/TitleOpportunities'
-import { ListItem } from '../atoms/ListItem'
 import { OpportunityCard } from '../molecules/OpportunityCard'
 
 const SectionOpportunities = () => {

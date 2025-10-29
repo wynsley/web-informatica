@@ -4,49 +4,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: var(--bg-courss);
+  gap: 5em;
 }
 
 .cardsContainer {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
   color: var(--text-color);
-  margin-top: 4em;
+  width: 100%;
 }
 
 .soporte {
-  background-image: url('/public/soporte-tecnico.jpg');
+  background-image: url('/soporte-tecnico.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .redes {
-  background-image: url('/public/redes.jpg');
+  background-image: url('/redes.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .seguridad {
-  background-image: url('/public/seguridad.jpg');
+  background-image: url('/seguridad.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .programacion {
-  background-image: url('/public/programming.jpg');
+  background-image: url('/programming.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .diseno {
-  background-image: url('/public/diseno.jpg');
+  background-image: url('/diseno.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .edicion {
-  background-image: url('/public/edicion.jpg');
+  background-image: url('/edicion.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -58,19 +61,22 @@
 }
 
 /* responsivo*/
-@media (min-width: 1024px) {
-  .cardsContainer {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 991px) {
+  .opportunities{
+    padding: 4em 5%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 768px) {
+  .opportunities{
+    padding: 2em 2%;
+  }
   .cardsContainer {
     grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .cardsContainer {
     grid-template-columns: 1fr; 
     gap: 1.5em; 

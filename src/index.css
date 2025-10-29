@@ -70,7 +70,7 @@ body{
   background: var(--bg-home);
   color: var(--text-color);
 }
-section:not([class*="home"], [class*="caroussel"]) {
+section:not([class*="caroussel"]) {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -83,30 +83,22 @@ section:not([class*="home"], [class*="caroussel"]) {
 */
 @media(max-width: 1200px){
   html{
-  font-size: 55.5%;
+  font-size: 58.5%;
 }
 }
 @media(max-width: 991px){
   html{
-  font-size: 50.5%;
+  font-size: 54.5%;
 }
 }
 @media(max-width: 768px){
   html{
-  font-size: 46.5%;
+  font-size: 48.5%;
 }
-section:not( [class*="caroussel"]){
-  min-height: 90vh;
+section:not([class*="caroussel"]):not([class*="home"]):not([class*="courses"]) {
+  min-height: 80vh;
   width: 100%;
 }
+
 }
-@media(max-width: 550px){
-  html{
-  font-size: 42.5%;
-}
-}
-@media(max-width: 420px){
-    html{
-  font-size: 42.5%;
-}
-}
+

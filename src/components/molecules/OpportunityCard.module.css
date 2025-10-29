@@ -1,43 +1,57 @@
 .card {
-    padding: 3em;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    transition: transform 0.2s;
-    gap: 2rem;
-    position: relative;
+  padding: 2em;
+  border-radius: 12px;
+  transition: transform 0.4s;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(47, 182, 216, 0.27);
+  border: 1px solid var(--ski-blue-1);
+  height: 29em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 0;
-    border-radius: 12px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.074) 0%,
+    rgb(0, 0, 0) 100%
+  );
+  z-index: 0;
+  border-radius: 12px;
 }
 
 .card > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(2, 16, 20, 0.589);
+  border-color: var(--text-color);
 }
 
 .cardTitle {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1em;
-    color: var(--ski-blue-1);
+  font-family: 'Michroma';
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
 }
 
 .cardDescription {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

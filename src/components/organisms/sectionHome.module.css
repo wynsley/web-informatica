@@ -16,6 +16,12 @@
   object-fit: cover; 
   object-position: center; 
   z-index: -1;
+  position: fixed;
+
+}
+
+.img{
+  display: none;
 }
 
 
@@ -36,9 +42,23 @@
   .home {
     height: 50vh; 
     padding: 3em 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
   }
   .bgImage {
     object-position: center top;
+  }
+  .img{
+    margin-bottom: 3em;
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: auto;
+    z-index: 1;
   }
 
 }
