@@ -70,10 +70,13 @@ body{
   background: var(--bg-home);
   color: var(--text-color);
 }
+
+/* Ajuste para secciones: usa padding en lugar de min-height fija */
 section:not([class*="caroussel"]) {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  padding: 6rem 5%;
 }
 
 
@@ -83,22 +86,79 @@ section:not([class*="caroussel"]) {
 */
 @media(max-width: 1200px){
   html{
-  font-size: 58.5%;
+    font-size: 58.5%;
+  }
+  
+  section:not([class*="caroussel"]):not([class*="home"]) {
+    min-height: auto; 
+  }
 }
-}
+
 @media(max-width: 991px){
   html{
-  font-size: 54.5%;
+    font-size: 54.5%;
+  }
+  
+  section:not([class*="caroussel"]) {
+    min-height: auto;
+    padding: 5rem 4%;
+  }
 }
+
+@media(max-width: 820px){
+  html{
+    font-size: 52%;
+  }
+  
+  
+  section:not([class*="caroussel"]):not([class*="home"]):not([class*="courses"]) {
+    min-height: auto;
+    padding: 4rem 3%;
+  }
+  
+ 
+  section[class*="home"],
+  section[class*="courses"] {
+    min-height: 85vh;
+    padding: 5rem 4%;
+  }
 }
+
 @media(max-width: 768px){
   html{
-  font-size: 48.5%;
-}
-section:not([class*="caroussel"]):not([class*="home"]):not([class*="courses"]) {
-  min-height: 80vh;
-  width: 100%;
+    font-size: 48.5%;
+  }
+  
+  section:not([class*="caroussel"]):not([class*="home"]):not([class*="courses"]) {
+    min-height: auto;
+    padding: 4rem 3%;
+  }
+  
+  section[class*="home"],
+  section[class*="courses"] {
+    min-height: auto;
+    padding: 4rem 3%;
+  }
 }
 
+@media(max-width: 480px){
+  html{
+    font-size: 45%;
+  }
+  
+  section:not([class*="caroussel"]) {
+    min-height: auto;
+    padding: 3rem 4%;
+  }
 }
 
+@media(max-width: 320px){
+  html{
+    font-size: 42%;
+  }
+  
+  section:not([class*="caroussel"]) {
+    min-height: auto;
+    padding: 2.5rem 3%;
+  }
+}

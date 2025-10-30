@@ -1,0 +1,136 @@
+.form {
+  min-width: 380px;
+  width: 36em;
+  max-width: 600px;
+  min-height: 58em; 
+  padding: 2.5em 1.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  border: 1px solid rgba(4, 255, 0, 0.22);
+  border-radius: 15px;
+  overflow: visible; 
+  background: rgba(1, 13, 15, 0.766);
+  box-shadow: 0 0 60px rgba(4, 255, 0, 0.15), 0 0 40px rgba(4, 255, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.form:hover {
+  box-shadow: 0 0 80px rgba(4, 255, 0, 0.22), 0 0 60px rgba(4, 255, 0, 0.18),
+    0 12px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  border: 1px solid rgba(4, 255, 0, 0.3);
+}
+
+.containerTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  justify-content: center;
+  align-items: center;
+}
+
+.formTitle {
+  font-size: 2em;
+  text-shadow: 0 1px 2px var(--ski-blue-1);
+  margin-top: 1em;
+}
+
+.formParagr {
+  font-size: 1.3em;
+  color: var(--ski-blue-1);
+}
+
+.btnForm {
+  color: aliceblue;
+  width: 100%;
+  max-width: 12em;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  background: linear-gradient(135deg, #092432, #0d809c);
+  padding: 0.8em 1.5em; /* Asegura padding adecuado */
+}
+
+/* Responsive mejorado */
+@media (max-width: 1200px) {
+  .form {
+    min-height: auto; /* Deja que el contenido determine la altura */
+    padding: 2em 1.5em;
+  }
+}
+
+@media (max-width: 991px) {
+  .form {
+    min-height: auto;
+    padding: 2em 1.5em;
+    gap: 1.8em;
+  }
+  
+  .formTitle {
+    font-size: 2.2em;
+  }
+  
+  .formParagr {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    min-height: auto;
+    min-width: 370px;
+    padding: 3em 2em;
+    gap: 1.5em;
+  }
+  
+  .formTitle {
+    font-size: 2.4em;
+    margin-top: 0.5em;
+  }
+  
+  .formParagr {
+    font-size: 1.6em;
+  }
+  .btnForm {
+    width: 13em;
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 420px) {
+  .form {
+    min-height: auto;
+    min-width: 350px;
+    padding: 3em 2em;
+    gap: 1.2em;
+  }
+  
+  .formTitle {
+    font-size: 2.4em;
+    margin-top: 0.5em;
+  }
+  
+  .formParagr {
+    font-size: 1.6em;
+  }
+  
+  .btnForm {
+    margin-top: 2wm;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .form {
+    min-height: auto;
+    min-width: 290px;
+    padding: 2em 1.6em;
+    gap: 1em;
+  }
+  
+ 
+}

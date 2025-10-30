@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   background: var(--bg-courss);
-  gap: 5em;
+  gap: 3em;
 }
 
 .cardsContainer {

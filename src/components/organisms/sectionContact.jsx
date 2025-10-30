@@ -3,9 +3,10 @@ import { BsTelephoneForward } from "react-icons/bs";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { TfiWorld } from "react-icons/tfi";
 import { SlLocationPin } from "react-icons/sl";
+import { Form } from "./form";
 
 function Contact() {
-  const title = "Contact";
+  const title = "Contacto";
   const listContact = [
     {
       icon: <BsTelephoneForward />,
@@ -31,36 +32,28 @@ function Contact() {
 
   return (
     <section id="contact" className={styles.contact}>
-      <h2>{title}</h2>
-      <div>
-        <article>
-          <h3>Contáctanos</h3>
-          <p>
+      <h2 className={styles.titleC}>{title}</h2>
+      <div className={styles.contContact}>
+        <article className={styles.articleContact}>
+          <h3 className={styles.cardTitle}>Contáctanos</h3>
+          <p className={styles.paragraph}>
             “¿Buscas colaborar o necesitas más información? Contáctame y
             encontremos juntos la mejor forma de hacer realidad tus ideas.”
           </p>
-          {listContact.map((item, index) => (
-            <div key={index} className={styles.contactItem}>
-              <span>{item.icon}</span>
-              <div>
-                <h4>{item.title}</h4>
-                <p>{item.text}</p>
+          <div className={styles.containerDer}>
+            {listContact.map((item, index) => (
+              <div key={index} className={styles.contactItem}>
+                <span className={styles.icon}>{item.icon}</span>
+                <div className={styles.containerTel}>
+                  <h4 className={styles.titleCont}>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </article>
+        <Form />
       </div>
-      <form action="">
-        <h3>¿Tienes alguna pregunta?</h3>
-        <p>¡Escríbenos y te responderemos pronto!</p>
-        <div >
-        <input type="text" placeholder="Nombre" />
-        <input type="text" placeholder="Teléfono" />
-        <input type="email" placeholder="Email" />
-        <textarea name="message" id="" placeholder="Mensaje"></textarea>
-        </div>
-        <button>Enviar</button>
-      </form>
     </section>
   );
 }

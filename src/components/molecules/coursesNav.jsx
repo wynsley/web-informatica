@@ -1,4 +1,4 @@
-import { CoursesBtn } from "../atoms/CoursesBtn";
+import { Button } from "../atoms/button";
 import styles from "./coursesNav.module.css";
 
 function CoursesNav({ activeCycle, onCycleChange }) {
@@ -9,7 +9,8 @@ function CoursesNav({ activeCycle, onCycleChange }) {
       <h3 className={styles.navTitle}>Ciclos</h3>
       <div className={styles.tabsContainer}>
         {cycles.map((cycle) => (
-          <CoursesBtn
+          <Button
+            label='Ciclo'
             key={cycle}
             cycle={cycle}
             isActive={activeCycle === cycle}

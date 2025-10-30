@@ -1,26 +1,114 @@
-.footer{
-    width: 100vw;
-    height: 6em;
-    background-color: black;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5em;
+.footer {
+  width: 100%;
+  height: 14em;
+  background-color: rgb(13, 13, 13);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5em;
 }
 
-.copyright{
-    text-align: center;
-    font-size: 1.3em;
+.containerContact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 0 10%;
 }
 
-.autores{
-    font-size:.9em;
-    font-family: 'Michroma';
+.icon {
+  color: var(--ski-blue-1);
+  font-size: 6em;
+  margin-bottom: -0.3em;
+  transition: .4s ease;
+}
+
+.icon:hover{
+  transform: translateY(-3px);
+}
+
+.contactCont {
+  display: flex;
+  align-items: center;
+}
+
+.contactLink {
+  display: inline-flex;           
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;                    
+  height: 1.5em;
+  font-size: 2.6em;
+  margin-left: .5em;
+  color: var(--ski-blue-1);
+  border-radius: 50%;
+  transition: background-color 0.4s, transform 0.3s ease;
+}
+
+.contactLink:hover {
+  transform: translateY(-3px);
+  background-color: var(--ski-blue-1);
+  color: #fff;
+}
+
+
+
+.lineFooter {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--ski-blue-1),
+    transparent
+  );
+  margin: 0em 0 2em 0;
+}
+.containerAutors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.copyright {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.autores {
+  font-size: 0.9em;
+  font-family: "Michroma";
 }
 
 .autores span {
-    color: aqua;
-    font-size:1.2em;
-    font-family: 'Michroma';
+  color: aqua;
+  font-size: 1.2em;
+  font-family: "Michroma";
+}
+
+@media(max-width:768px){
+  .footer{
+    padding: 0 3em;
+  }
+  .copyright {
+    font-size: 1.1em;
+  }
+  .autores{
+    font-size: .6em;
+  }
+}
+@media(max-width:480px){
+  .footer{
+    padding: .5em ;
+  }
+  .copyright {
+    font-size: .7em;
+  }
+  .autores{
+    font-size: .4em;
+  }
+
 }

@@ -33,6 +33,11 @@
   }
 }
 
+@media (max-width: 991px) {
+  .caroussel{
+    height: 18vh;
+  }
+}
 @media (max-width: 768px) {
   .caroussel{
     height: 16vh;

@@ -29,18 +29,11 @@
 =============== RESPONSIVE DESIGN ============
 */
 
-@media (max-width: 768px) {
-  .home {
-    height: 70vh; 
-    padding: 4em 5%;
-  }
-
-}
 
 
 @media (max-width: 480px) {
   .home {
-    height: 50vh; 
+    height: 81vh; 
     padding: 3em 5%;
     display: flex;
     flex-direction: column;

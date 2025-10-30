@@ -1,0 +1,23 @@
+.textarea {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 0 1.3px var(--ski-blue-1);
+  height: 10em;
+  width: 100%;
+  padding: 1em;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  color: var(--text-color);
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+} 
+
+.textarea:focus {
+  border-color: rgba(4, 255, 0, 0.526);
+  box-shadow: 0 0 1px  rgb(4, 255, 0);
+}
+@media(max-width:420px){
+  .textarea{
+    height: 8em;
+  }
+}
