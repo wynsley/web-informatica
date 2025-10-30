@@ -1,11 +1,12 @@
 .card {
+  overflow: hidden;
   padding: 2em;
   border-radius: 12px;
   transition: transform 0.4s;
   position: relative;
   box-shadow: 0 10px 30px rgba(47, 182, 216, 0.27);
   border: 1px solid var(--ski-blue-1);
-  height: 29em;
+  height: 25em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
