@@ -89,7 +89,7 @@
   .form {
     min-height: auto;
     min-width: 370px;
-    padding: 3em 2em;
+    padding: 4em 2em;
     gap: 1.5em;
   }
   
@@ -110,7 +110,7 @@
 @media (max-width: 420px) {
   .form {
     min-height: auto;
-    min-width: 350px;
+    min-width: 330px;
     padding: 3em 2em;
     gap: 1.2em;
   }
