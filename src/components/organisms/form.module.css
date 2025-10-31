@@ -53,6 +53,13 @@
   background: linear-gradient(135deg, #092432, #0d809c);
   padding: 0.8em 1.5em; /* Asegura padding adecuado */
 }
+.submitError {
+  color: var(--ski-blue-1);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 
 /* Responsive mejorado */
 @media (max-width: 1200px) {

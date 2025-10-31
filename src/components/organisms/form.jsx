@@ -16,8 +16,8 @@ function Form() {
   } = useFormValidation();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(""); // <-- nuevo estado para mensaje de error
 
-  // Estructura de inputs con validación
   const listInputs = [
     {
       id: "nombre",
@@ -72,40 +72,38 @@ function Form() {
     maxLength: 500,
   };
 
-  // Consumir la API
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitError(""); // resetear mensaje antes de enviar
 
-  if (!validateForm()) return;
+    if (!validateForm()) return;
 
-  setIsSubmitting(true);
+    setIsSubmitting(true);
 
-  try {
-    const response = await fetch("https://api-informatic.vercel.app/api/contacts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("https://api-informatic.vercel.app/api/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (!response.ok) {
-      throw new Error("Error al enviar el formulario");
+      if (!response.ok) {
+        throw new Error("Error al enviar el formulario");
+      }
+
+      const data = await response.json();
+      console.log("Datos enviados correctamente:", data);
+
+      resetForm();
+    } catch (error) {
+      console.error("Error al enviar:", error);
+      setSubmitError("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    const data = await response.json();
-    console.log("Datos enviados correctamente:", data);
-
-    alert("¡Mensaje enviado con éxito! Te responderemos pronto.");
-    resetForm();
-  } catch (error) {
-    console.error("Error al enviar:", error);
-    alert("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
+  };
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
@@ -129,6 +127,9 @@ const handleSubmit = async (e) => {
         className={styles.btnForm}
         disabled={isSubmitting}
       />
+
+      {/* Mostrar mensaje de error */}
+      {submitError && <p className={styles.submitError}>{submitError}</p>}
     </form>
   );
 }
