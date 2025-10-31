@@ -9,14 +9,15 @@ const SectionOpportunities = () => {
       id: 1, 
       title: 'Soporte Técnico', 
       description: (
-        <ul className={styles.list}>
-          <li>Mantenimiento preventivo y correctivo</li>
-          <li>Instalación de software y hardware</li>
-          <li>Diagnóstico y solución de fallos</li>
-          <li>Soporte remoto y presencial</li>
-          <li>Configuración de equipos y periféricos</li>
-          <li>Respaldo y recuperación de datos</li>
-        </ul>
+        <p className={styles.list}>
+          Mantenimiento preventivo y correctivo
+          Instalación de software y hardware
+          Diagnóstico y solución de fallos
+          Soporte remoto y presencial
+          Configuración de equipos y periféricos
+          Respaldo y recuperación de datos
+        </p>
+
       ),
       className: styles.soporte
     },
@@ -24,14 +25,14 @@ const SectionOpportunities = () => {
       id: 2, 
       title: 'Redes', 
       description: (
-        <ul className={styles.list}>
-          <li>Administración de redes LAN, WAN y Wi-Fi</li>
-          <li>Configuración de routers y switches</li>
-          <li>Seguridad y monitoreo de red</li>
-          <li>Instalación de cableado estructurado</li>
-          <li>Redes virtuales y servicios en la nube</li>
-          <li>Implementación de servidores de red</li>
-        </ul>
+        <p className={styles.list}>
+          Administración de redes LAN, WAN y Wi-Fi
+          Configuración de routers y switches
+          Seguridad y monitoreo de red
+          Instalación de cableado estructurado
+          Redes virtuales y servicios en la nube
+          Implementación de servidores de red
+        </p>
       ),
       className: styles.redes
     },
@@ -39,14 +40,14 @@ const SectionOpportunities = () => {
       id: 3, 
       title: 'Seguridad Informática', 
       description: (
-        <ul className={styles.list}>
-          <li>Protección contra amenazas digitales</li>
-          <li>Auditoría y análisis de vulnerabilidades</li>
-          <li>Gestión de respaldos y recuperación</li>
-          <li>Control de accesos y cifrado de datos</li>
-          <li>Monitoreo de incidentes de seguridad</li>
-          <li>Políticas de ciberseguridad</li>
-        </ul>
+        <p className={styles.list}>
+          Protección contra amenazas digitales
+          Auditoría y análisis de vulnerabilidades
+          Gestión de respaldos y recuperación
+          Control de accesos y cifrado de datos
+          Monitoreo de incidentes de seguridad
+          Políticas de ciberseguridad
+        </p>
       ),
       className: styles.seguridad
     },
@@ -54,14 +55,14 @@ const SectionOpportunities = () => {
       id: 4, 
       title: 'Programación', 
       description: (
-        <ul className={styles.list}>
-          <li>Desarrollo web y móvil</li>
-          <li>Lógica de programación</li>
-          <li>Creación de APIs y microservicios</li>
-          <li>Conexión con bases de datos</li>
-          <li>Automatización de procesos</li>
-          <li>Diseño de sistemas escalables</li>
-        </ul>
+        <p className={styles.list}>
+          Desarrollo web y móvil
+          Lógica de programación
+          Creación de APIs y microservicios
+          Conexión con bases de datos
+          Automatización de procesos
+          Diseño de sistemas escalables
+        </p>
       ),
       className: styles.programacion
     },
@@ -69,14 +70,14 @@ const SectionOpportunities = () => {
       id: 5, 
       title: 'Diseño', 
       description: (
-        <ul className={styles.list}>
-          <li>Diseño de interfaces (UI)</li>
-          <li>Creación de identidad visual</li>
-          <li>Diseño responsivo</li>
-          <li>Experiencia de usuario (UX)</li>
-          <li>Edición de imágenes y videos</li>
-          <li>Presentaciones y materiales gráficos</li>
-        </ul>
+        <p className={styles.list}>
+          Diseño de interfaces (UI)
+          Creación de identidad visual
+          Diseño responsivo
+          Experiencia de usuario (UX)
+          Edición de imágenes y videos
+          Presentaciones y materiales gráficos
+        </p>
       ),
       className: styles.diseno
     },
@@ -84,14 +85,14 @@ const SectionOpportunities = () => {
       id: 6, 
       title: 'Edición', 
       description: (
-        <ul className={styles.list}>
-          <li>Edición de video profesional</li>
-          <li>Mezcla y corrección de audio</li>
-          <li>Retoque fotográfico</li>
-          <li>Animaciones básicas y motion graphics</li>
-          <li>Postproducción audiovisual</li>
-          <li>Exportación en diferentes formatos</li>
-        </ul>
+        <p className={styles.list}>
+          Edición de video profesional
+          Mezcla y corrección de audio
+          Retoque fotográfico
+          Animaciones básicas y motion graphics
+          Postproducción audiovisual
+          Exportación en diferentes formatos
+        </p>
       ),
       className: styles.edicion
     },
