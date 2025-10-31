@@ -1,5 +1,5 @@
 import { CourseCard } from "./coursesCard";
-import styles from "./CoursesGrid.module.css";
+import styles from "./coursesGrid.module.css";
 
 function CoursesGrid({ courses }) {
   return (
