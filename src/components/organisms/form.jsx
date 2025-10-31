@@ -72,40 +72,40 @@ function Form() {
     maxLength: 500,
   };
 
-  //Consumir la API
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // Consumir la API
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!validateForm()) return;
+  if (!validateForm()) return;
 
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    try {
-      // Simulación de envío asíncrono (ejemplo de llamada real a API)
-      const response = await fetch("/http://localhost:3000/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  try {
+    const response = await fetch("https://api-informatic.vercel.app/api/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-      if (!response.ok) {
-        throw new Error("Error al enviar el formulario");
-      }
-
-      console.log("Datos enviados:", formData);
-      alert("¡Mensaje enviado con éxito! Te responderemos pronto.");
-      resetForm();
-
-
-    } catch (error) {
-      console.error("Error al enviar:", error);
-      alert(
-        "Hubo un error al enviar el mensaje. Por favor, intenta nuevamente."
-      );
-    } finally {
-      setIsSubmitting(false);
+    if (!response.ok) {
+      throw new Error("Error al enviar el formulario");
     }
-  };
+
+    const data = await response.json();
+    console.log("Datos enviados correctamente:", data);
+
+    alert("¡Mensaje enviado con éxito! Te responderemos pronto.");
+    resetForm();
+  } catch (error) {
+    console.error("Error al enviar:", error);
+    alert("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
