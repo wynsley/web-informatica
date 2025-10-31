@@ -59,7 +59,7 @@ export function Graduates() {
       </div>
 
       <div>
-        <img src="/EGRESADO.png" alt="Egresado" className={styles.imggradu} />
+        <img src="/PROFILE-EGRE.png" alt="Egresado" className={styles.imggradu} />
       </div>
 
       {modalOpen && (

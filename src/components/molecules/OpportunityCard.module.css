@@ -1,6 +1,6 @@
 .card {
   overflow: hidden;
-  padding: 2em;
+  padding: 1.2em;
   border-radius: 12px;
   transition: transform 0.4s;
   position: relative;
@@ -44,7 +44,8 @@
   font-family: 'Michroma';
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
+  color: var(--ski-blue-1);
 }
 
 .cardDescription {

@@ -1,7 +1,9 @@
 .graduates {
+  padding: 6em 0;
     display: flex;
     background-color: var(--bg-courss);
     justify-content: center;
+    align-items: center;
 }
 
 .infograd {
@@ -27,20 +29,20 @@
 
 .parafgrad {
     margin-top: 4rem;
-    font-size: 1.25em;
+    font-size: 1.3em;
     margin-left: 3em;
 }
 
 .imggradu {
-    width: 34vw;
+    width: 18vw;
     height: auto;
     margin-right: 3em;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px),
-       (max-width: 768px),
-       (max-width: 480px) {
+      (max-width: 768px),
+      (max-width: 480px) {
   .graduates {
     flex-direction: column;
     align-items: center;
