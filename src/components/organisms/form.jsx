@@ -81,13 +81,16 @@ function Form() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api-informatic.vercel.app/api/contacts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://api-informatic.vercel.app/api/contacts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Error al enviar el formulario");
@@ -99,7 +102,9 @@ function Form() {
       resetForm();
     } catch (error) {
       console.error("Error al enviar:", error);
-      setSubmitError("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.");
+      setSubmitError(
+        "Hubo un error al enviar el mensaje. Por favor, intenta nuevamente."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -112,6 +117,7 @@ function Form() {
         <p className={styles.formParagr}>
           ¡Escríbenos y te responderemos pronto!
         </p>
+        {submitError && <p className={styles.submitError}>{submitError}</p>}
       </div>
 
       <FormInput
@@ -127,9 +133,6 @@ function Form() {
         className={styles.btnForm}
         disabled={isSubmitting}
       />
-
-      {/* Mostrar mensaje de error */}
-      {submitError && <p className={styles.submitError}>{submitError}</p>}
     </form>
   );
 }
