@@ -1,0 +1,69 @@
+.graduates {
+    display: flex;
+    background-color: var(--bg-courss);
+    justify-content: center;
+}
+
+.infograd {
+    margin: 2rem;
+}
+
+.titlegrad {
+  margin-top: 3em;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #f1f1f1ff;
+    font-family: "Michroma", sans-serif;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    margin-left: 1.3em;
+}
+
+.habilidades {
+    color: var(--ski-blue-1);
+    font-family: "Michroma";
+}
+
+.parafgrad {
+    margin-top: 4rem;
+    font-size: 1.25em;
+    margin-left: 3em;
+}
+
+.imggradu {
+    width: 34vw;
+    height: auto;
+    margin-right: 3em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px),
+       (max-width: 768px),
+       (max-width: 480px) {
+  .graduates {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .infograd {
+    margin: 4rem 2rem;
+    gap: 5rem;
+  }
+
+  .titlegrad {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .parafgrad {
+    margin: 2rem auto;
+    font-size: 1.1em;
+  }
+
+  .imggradu {
+    width: 50vw;
+  }
+}
