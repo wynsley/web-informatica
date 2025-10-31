@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GraduateCardsList } from "../molecules/GraduateCardsList";
 import { Modal } from "../atoms/Modal";
-import styles from "./SectionGraduates.module.css";
+import styles from "./sectionGraduates.module.css";
 
 export function Graduates() {
   const [modalOpen, setModalOpen] = useState(false);
