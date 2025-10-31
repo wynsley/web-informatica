@@ -1,4 +1,4 @@
-import styles from "./CoursesCard.module.css";
+import styles from "./coursesCard.module.css";
 
 function CourseCard({ title, description, image }) {
   return (
