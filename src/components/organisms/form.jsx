@@ -112,12 +112,12 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
+        {submitError && <p className={styles.submitError}>{submitError}</p>}
       <div className={styles.containerTitles}>
         <h3 className={styles.formTitle}>¿Tienes Alguna Pregunta?</h3>
         <p className={styles.formParagr}>
           ¡Escríbenos y te responderemos pronto!
         </p>
-        {submitError && <p className={styles.submitError}>{submitError}</p>}
       </div>
 
       <FormInput
