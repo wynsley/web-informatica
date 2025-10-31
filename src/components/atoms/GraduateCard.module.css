@@ -1,0 +1,24 @@
+.cardgrad {
+    min-width: 150px;
+    background: linear-gradient(135deg, #302e33, #2fb6d8bb);
+    padding: 2rem;
+    border-radius: 1.25rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cardgrad h2 {
+    font-size: 1.5rem;
+    margin: 1;
+    letter-spacing: 0.5px;
+}
+
+.cardgrad:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.05);
+}
